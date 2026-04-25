@@ -4,4 +4,14 @@ version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.14"
-dependencies = []
+dependencies = [
+    "example-private-lib",
+]
+
+[dependency-groups]
+dev = [
+    "pytest==9.0.0",
+]
+
+[tool.uv.sources]
+example-private-lib = { git = "ssh://git@github.com/ponko2/example-private-lib.git" }
